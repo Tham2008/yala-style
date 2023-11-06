@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css?token=YOUR_AUTH_TOKEN');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        color: black;
+        font-size: 15px;
+        font-family: "Quicksand", sans-serif;
+    }
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.section-index-newsletter {
+    background-image: url(//theme.hstatic.net/200000301562/1000687964/14/home_newsletter_bkg.jpg?v=3265);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+@media (max-width: 768px) {
+    .menuList-submain {
+      display: none;
+    }
+
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      .widget-footer {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột khi kích thước nhỏ hơn 768px */
+    }
+  }
+
+
+
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+}
+.gallery-item {
+    width: 33.33%; /* Chia thành 3 cột trên màn hình có độ rộng lớn hơn hoặc bằng 1024px */
+  }
+}
+
+
+@media (min-width: 992px){
+.mainHeader {
+    border-bottom: 1px solid var(--shop-color-border);
+}
+}
+
+    /* Ẩn dropdown menu mặc định */
+    .menuList-submain {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+    }
+
+    /* Hiển thị dropdown menu khi hover vào "has-submenu" */
+    .has-submenu:hover .menuList-submain {
+        display: block;
+    }
+
+   
+    /* CSS */
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    #navbar li {
+        list-style: none;
+        position: relative;
+        margin-right: 20px;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        color: #1a1a1a;
+        transition: 0.3s ease;
+    }
+
+    #navbar li a.active::after {
+        content: "";
+        width: 112px;
+        height: 2px;
+        background: black;
+        position: absolute;
+        bottom: -1px;
+        left: 22px;
+    }
+    .groupbanner-hover {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        .groupbanner-hover:after, .groupbanner-hover:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transition: all 0.5s ease-out 0s;
+          /* -webkit-transition: all 0.5s ease-in-out 0s; */
+          -ms-transition: all 0.5s ease-in-out 0s;
+          }
+        .groupbanner-hover img:not(.lazyload) {
+          transition: opacity 0.3s, transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          -webkit-transition: opacity 0.3s, transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          -ms-transition: opacity 0.3s, transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .groupbanner-hover:hover img:not(.lazyload) {
+          -ms-transform: scale(1.08);
+          -webkit-transform: scale(1.08);
+          transform: scale(1.08); }
+        .groupbanner-hover:hover:before {
+          background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+          bottom: 50%;
+          top: 50%; }
+        .groupbanner-hover:hover:after {
+          background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+          left: 51%;
+          right: 50%; }
+
+    .title_filter:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 40%;
+        right: 10px;
+        width: 0px;
+        height: 0px;
+        margin: 0;
+        background: transparent;
+        border-style: solid;
+        border-width: 7px 6px 0 6px;
+        border-color: #bababa transparent transparent transparent;
+    }
+
+    .collection-sortby-option {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0;
+        top: calc(100% + 10px);
+        z-index: 999;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .art-image {
+        transition: transform 0.2s ease;
+    }
+
+    .art-image:hover {
+        transform: scale(1.1);
+    }
+
+    .art-link a:before {
+        content: "";
+        height: 40px;
+        width: 40px;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 30px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .art-link a:focus:before {
+        width: 100%;
+        visibility: visible;
+        background-color: var(--shop-color-main);
+    }
+
+    .art-link a:focus {
+        color: #ffffff;
+    }
+
+    .art-link a:hover .icoplus {
+        text-indent: 15px;
+        border-color: var(--shop-color-main);
+    }
+
+    .art-link a:hover .icoplus svg {
+        fill: #ffffff;
+    }
+
+    
+/* Quy tắc CSS mặc định */
+.product-image-container .prod-img.second-image {
+  display: none;
+}
+
+.product-image-container:hover .prod-img.first-image {
+  display: none;
+}
+
+.product-image-container:hover .prod-img.second-image {
+  display: block;
+}
+
+/* Quy tắc horver li */
+.footerNav-link li:hover, .menuList-links li:hover {
+    color: red; /* Thay đổi màu chữ sang màu đỏ khi hover */
+    transition: color 0.3s; /* Thời gian chuyển đổi màu: 0.3 giây */
+  }
+  /* Quy tắc CSS mặc định */
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .topbar {
+  background-color: #f5f5f5;
+  color: #666;
+  padding: 10px 0;
+}
+
+.header .topbar .discount {
+  font-weight: 500;
+  font-size: 14px;
+}
+.header-menu {
+    margin-right: 20px; 
+    display: flex;
+  align-items: center;
+  }
+  
+ .proloop-image .proloop-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/*liên hệ*/
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    
+}
+.input-group .form-control{
+    color: #5c5c5c;
+    height: 45px;
+    width: 100%;
+    font-weight: 500;
+    padding: 8px 20px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    box-shadow: none;
+}
+
+.box-info-contact li > span {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    float: left;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+}
+.widget-footer .content {
+    flex-direction: column; /* Xếp các mục trong một cột */
+}
+.widget-footer .content .contact-info {
+    margin-top: 1rem; /* Thêm khoảng cách giữa các đoạn văn */
+}
+.product-loop .proloop-detail h3 a, .section-index-latestBlog .latestBlog .article-item__detail .art-title {
+    white-space: initial;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    }
